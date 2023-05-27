@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <section style="background-color: #000; color: white;">
+        <section class="header-container-top">
             <p>Grandes ofertas en comederos</p>
             <select name="regional" id="regional">
-                <option value="volvo">Español</option>
-                <option value="saab">ARG$</option>
+                <option value="espanol">Español</option>
+                <option value="arg">ARG$</option>
             </select>
         </section>
 
-        <section style="background-color: #F0A83E;">
+        <section class="header-container-bottom">
             <img src="./img/Logo.png" alt="Logo">
-            <ul>
+            <ul class="nav-links">
                 <li><img src="./img/pawprint 1.svg" alt="">Categorías</li>
                 <li><img src="./img/pawprint 1.svg" alt="">Pets</li>
                 <li><img src="./img/pawprint 1.svg"  alt="">Nosotros</li>
@@ -37,7 +41,7 @@
         <section>
             <img src="./img/pawprint 1.png" alt="">
             <h2>Productos Destacados</h2>
-            <ul>
+            <ul class="main-list">
                 <li>Comederos</li>
                 <li>Accesorios</li>
                 <li>Comida</li>
@@ -60,6 +64,45 @@
                 </article>
             </section>
         </section>
+        <section class="contact-info">
+            <h2>Contáctos</h2>
+            <input class="contact-input" type="text" placeholder="Nombre y Apellido">
+            <input class="contact-input" type="text" placeholder="Ingresá tu correo electrónico">
+            <input class="contact-input" type="text" placeholder="Teléfono">
+            <div class="contact-buttons">
+                <button class="contact-buttons--reset">Resetear</button>
+                <button class="contact-buttons--send">Enviar</button>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div>
+                <img src="./img/Group.png" alt="email-icon">
+                <p>Suscríbete para más novedades</p>
+            </div>
+            <div class="subscribe--action">
+                <input type="text" placeholder="Ingresá tu correo electronico">
+                <button>Suscribirme</button>
+            </div>
+        </section>
     </main>
+    <footer>
+        <article>
+            <img src="./img/Icono.png" alt="Location">
+            <h4>Localidad</h4>
+            <p>Calle - provincia</p>
+        </article>
+        <article>
+            <img src="./img/Icono (1).png" alt="Location">
+            <h4>Teléfono</h4>
+            <p>Número de teléfono</p>
+        </article>
+        <article>
+            <img src="./img/Icono (2).png" alt="Location">
+            <h4>Correo Electrónico</h4>
+            <p>Dirección de correo</p>
+        </article>
+        <img src="./img/Logo.png" alt="">
+        <h4>Todos los derechos reservados Front End</h4>
+    </footer>
 </body>
 </html>

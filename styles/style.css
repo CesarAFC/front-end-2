@@ -1,0 +1,87 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.header-container-top {
+    background-color: #222222;
+    color: #f3f3f3;
+    font-weight: 400;
+}
+.header-container-bottom {
+    background-color: #f0a83e;
+  }
+.nav-links {
+    list-style: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 13px;
+}
+.nav-links > li {
+    display: inline;
+    padding-right: 20px;
+}
+
+.main-list > li{
+    display: inline;
+    padding-right: 20px;
+}
+.contact-info > h2 {
+    color: #3C2313;
+    font-weight: 700;
+}
+.contact-info > input {
+    border: none;
+    border-radius: 15px;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+}
+.contact-input {
+    background-color: #3C2313;
+    color: #fff;
+}
+.contact-input::placeholder {
+    color: #fff;
+}
+.contact-buttons > button {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 44px;
+    width: 110px;
+    border-radius: 15px;
+    color: #fff;
+}
+.contact-buttons--reset {
+    background: #8A8787;
+
+}
+.contact-buttons--send {
+    background:  #F0A83E;
+
+}
+.subscribe {
+    background-color: #F0A83E;
+    color: #fff;
+}
+.subscribe--action > input {
+    border: none;
+    border-radius: 15px;
+    padding: 15px 15px;
+}
+.subscribe--action > button {
+    border: none;
+    color: #fff;
+    background-color: #3C2313;
+    border-radius: 15px;
+    padding: 15px 15px;
+}
+footer {
+    background-color: #3C2313;
+}
+footer > h4 {
+    background-color: black;
+    color: #fff;
+}
