@@ -26,7 +26,7 @@
     background-color: #f0a83e;
   }
 .nav-links {
-    list-style: none;
+    list-style-type: none;
     color: #ffffff;
     font-weight: 400;
     font-size: 13px;
@@ -34,8 +34,15 @@
     cursor: pointer;
 }
 .nav-links > li {
-    /* display: inline; */
     padding-right: 20px;
+}
+.nav-links > li > img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.nav-links > li > p {
+    display: inline-block;
+    vertical-align: middle;
 }
 .banner {
     background-image: url('../img/bowl-and-pet-daities-on-green-background\ 1.png');
@@ -135,6 +142,7 @@
     margin-bottom: 75px;
 }
 .contact-buttons > button {
+    display: inline-block;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -195,6 +203,7 @@ footer {
     gap: 25px;
 }
 .footer-info-icons h4{
+    font-size: 20px;
     color: #fff;
 }
 .footer-info-icons p{
@@ -257,7 +266,6 @@ footer > h4 {
 }
 #menuToggle span:first-child
 {
-    background-color: rgb(255, 0, 166);
   transform-origin: 0% 0%;
 }
 #menuToggle span:nth-last-child(1)
@@ -285,9 +293,7 @@ footer > h4 {
 
 
 @media (width <= 480px) {
-    .nav-links {
-        display: none;
-    }
+
 
     .banner {
         align-items: center;
@@ -304,7 +310,7 @@ footer > h4 {
         margin-top: 25px;
     }
     .contact-buttons > button {
-        width: 230px;
+        width: 49vw;
     }
 
     .subscribe {
@@ -327,7 +333,21 @@ footer > h4 {
         gap: 20px;
     }
 
+    .footer-info-icons h4{
+        font-size: 24px;
+    }
+    .footer-info-icons p{
+        font-size: 13px;
+    }
+}
+
+@media (width <= 600px) {
+    .nav-links {
+        display: none;
+    }
     #menuToggle {
+        right: -20px;
+        top: 2.5px;
         display: block;
     }
 }
