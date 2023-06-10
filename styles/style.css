@@ -21,6 +21,7 @@
 .header-container-bottom {
     position: relative;
     display: flex;
+    align-items: center;
     padding: 24px 40px;
     justify-content: space-between;
     background-color: #f0a83e;
@@ -268,7 +269,7 @@ footer > h4 {
 {
   transform-origin: 0% 0%;
 }
-#menuToggle span:nth-last-child(1)
+#menuToggle span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
@@ -279,17 +280,44 @@ footer > h4 {
   transform: rotate(45deg) translate(-2px, -1px);
   background: #fff;
 }
-#menuToggle input:checked ~ span:nth-last-child(2)
+#menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(1)
+#menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
+#menu
+{
+  position: absolute;
+  left: 53px;
+  width: 100vw;
+  /* margin: -100px 0 0 -50px; */
+  padding: 22px;
+  /* padding-top: 125px; */
+  
+  background: #f0a83e;
+  color: #fff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  /* transform: translate(-100%, 0); */
+  transform: none;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: translate(-100%, 0);  
+  /* transform: none; */
+}
 
 
 @media (width <= 480px) {
