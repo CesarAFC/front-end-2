@@ -19,6 +19,7 @@
     border: none;
 }
 .header-container-bottom {
+    position: relative;
     display: flex;
     padding: 24px 40px;
     justify-content: space-between;
@@ -139,7 +140,7 @@
     cursor: pointer;
     height: 44px;
     width: 110px;
-    border-radius: 15px;
+    border-radius: 25px;
     color: #fff;
 }
 .contact-buttons--reset {
@@ -205,4 +206,128 @@ footer > h4 {
     background-color: black;
     color: #fff;
     text-align: center;
+}
+
+/* --------------------------------- */
+#menuToggle {
+    display: none;
+    position: relative;
+    right: 20px;
+    /* top: 50px; */
+    /* left: 50px; */
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+  }
+  #menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #fff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+    background-color: rgb(255, 0, 166);
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(1)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(1)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+
+@media (width <= 480px) {
+    .nav-links {
+        display: none;
+    }
+
+    .banner {
+        align-items: center;
+    }
+    .banner button {
+        margin-right: 18px;
+    }
+    .banner-action {
+        align-items: flex-end;
+    }
+
+    .products-cards {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    .contact-buttons > button {
+        width: 230px;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 14px;
+        padding: 10px;
+    }
+    .subscribe-logo {
+        gap: 20px;
+    }
+    .subscribe--action {
+        align-self: center;
+    }
+    .subscribe--action > input {
+        width: 320px;
+    }
+
+    .footer-info {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    #menuToggle {
+        display: block;
+    }
 }
